@@ -1,0 +1,16 @@
+.textarea-container {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  margin-left: 0;
+  color: blue;
+  top: 0;
+ /* left: 0; */
+  /* right: calc(50% - 12px); Position at the top right corner of the input box */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}

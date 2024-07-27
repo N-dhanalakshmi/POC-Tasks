@@ -1,0 +1,13 @@
+<div #dropdown id="dropdown" class="dropdown-container">
+  <select class="styled-element" (click)="toggleOptions()">
+  <option value="Default">Selected Item</option>
+  </select>
+  <button class="close-btn" (click)="showMenu()" *ngIf="!showOptions">
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </button>
+  <div *ngIf="showOptions" class=".options-menu">
+    <button (click)="addOption(dropdown)">Add Option</button>
+    <button (click)="removeOption(dropdown)">Remove Option</button>
+    <button (click)="removeDropDown(dropdown)">Remove DropDown</button>
+  </div>
+</div>

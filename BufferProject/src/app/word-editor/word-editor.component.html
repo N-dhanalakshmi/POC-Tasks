@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="toolbar">
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'textbox')">Textbox</div>
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'textarea')">Textarea</div>
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'dropdown')">Dropdown</div>
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'datepicker')">Datepicker</div>
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'table')">Table</div>
+  </div>
+  <div class="canvas" contenteditable="true" (dragover)="onDragOver($event)" (drop)="onDrop($event)"></div>
+</div>

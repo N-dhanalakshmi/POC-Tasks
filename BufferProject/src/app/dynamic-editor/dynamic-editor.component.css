@@ -1,0 +1,203 @@
+/* General container styling */
+.container {
+  display: flex;
+  margin: 20px;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+}
+
+/* Buttons container styling */
+.buttons-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30%;
+  margin-bottom: 10px;
+}
+
+.buttons-container button,#preview , #save , #cancel {
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* #preview{
+  margin-left: 90%;
+}
+#save{
+  margin-left: 70%;
+} */
+
+.buttons-container button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Toolbar styling */
+.toolbar {
+  width: 25%; /* 25% of the total width */
+  background-color: #fff;
+  margin-right: 20px;
+  border: 2px solid rgb(239, 235, 235);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start; /* Align items to the top */
+}
+
+.toolbar-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  /* border: 1px solid #007bff;
+  border-radius: 5px; */
+  cursor: pointer;
+  background-color: #fff;
+  text-align: center;
+  /* transition: background-color 0.3s, box-shadow 0.3s; */
+  width: calc(33.33% - 10px); /* Three items per row */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.toolbar-item:hover {
+  background-color: #d0e7ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Canvas container styling */
+.canvas-container {
+  width: 75%; /* 75% of the total width */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.canvas {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  flex-grow: 1;
+  border: 2px rgb(239, 235, 235);
+  padding: 20px;
+  min-height: 600px;
+  background-color: #fff;
+  overflow: auto;
+  outline: none;
+  font-family: Arial, sans-serif;
+}
+
+.canvas-element {
+  border: 1px solid #007bff;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  background-color: #f7f9fc;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.canvas-element.selected {
+  border: 2px solid #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form elements styling */
+input,
+textarea,
+select,
+table {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+textarea {
+  height: 80px;
+}
+
+select {
+  padding: 8px;
+}
+
+/* Table styling */
+table {
+  background-color: #f7f9fc;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+table input {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+table th {
+  background-color: #e7f3ff;
+}
+
+table td {
+  background-color: #fff;
+}
+
+table th:hover,
+table td:hover {
+  background-color: #f1f1f1;
+}
+
+hr{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Dropdown options remove icon */
+select option i {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #ff0000;
+}
+
+select option i:hover {
+  color: #cc0000;
+}
+
+/* General canvas dynamic element styling */
+.canvas-dynamic-element {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #f7f9fc;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.canvas-dynamic-element:focus,
+.canvas-dynamic-element:hover {
+  border-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}

@@ -1,0 +1,51 @@
+<h2>Employees Table</h2>
+<input type="search" [(ngModel)]="searchKey" (input)="getEmployeeBySearch()">
+<table >
+    <thead>
+        <tr>
+            <th>EmployeeId</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.employeeId}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.designation}}</td>
+            <td>{{employee.department}}</td>
+        </tr>
+    </tbody>
+</table>
+<table >
+  <thead>
+      <tr>
+          <th>EmployeeId</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Designation</th>
+          <th>Department</th>
+      </tr>
+  </thead>
+  <tbody *ngIf="searchKey" >
+      <tr *ngFor="let employee of specificEmployees">
+          <td>{{employee.employeeId}}</td>
+          <td>{{employee.name}}</td>
+          <td>{{employee.email}}</td>
+          <td>{{employee.designation}}</td>
+          <td>{{employee.department}}</td>
+      </tr>
+  </tbody>
+  <tbody *ngIf="!searchKey" >
+    <tr *ngFor="let employee of employees">
+        <td>{{employee.employeeId}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.designation}}</td>
+        <td>{{employee.department}}</td>
+    </tr>
+</tbody>
+</table>

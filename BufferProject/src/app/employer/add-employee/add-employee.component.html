@@ -1,0 +1,87 @@
+<div class="container">
+  <h1>Add User</h1>
+  <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+
+    <div>
+      <label for="Name">Name:</label>
+      <input id="Name" formControlName="Name" type="text" required>
+      <div *ngIf="addUserForm.get('Name')?.invalid && addUserForm.get('Name')?.touched">
+        <small *ngIf="addUserForm.get('Name')?.errors?.['required']">Name is required.</small>
+        <small *ngIf="addUserForm.get('Name')?.errors?.['minlength']">Name must be at least 3 characters long.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="Email">Email:</label>
+      <input id="Email" formControlName="Email" type="email" required>
+      <div *ngIf="addUserForm.get('Email')?.invalid && addUserForm.get('Email')?.touched">
+        <small *ngIf="addUserForm.get('Email')?.errors?.['required']">Email is required.</small>
+        <small *ngIf="addUserForm.get('Email')?.errors?.['email']">Enter a valid email.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="Designation">Designation:</label>
+      <input id="Designation" formControlName="Designation" type="text" required>
+      <div *ngIf="addUserForm.get('Designation')?.invalid && addUserForm.get('Designation')?.touched">
+        <small *ngIf="addUserForm.get('Designation')?.errors?.['required']">Designation is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="Department">Department:</label>
+      <input id="Department" formControlName="Department" type="text" required>
+      <div *ngIf="addUserForm.get('Department')?.invalid && addUserForm.get('Department')?.touched">
+        <small *ngIf="addUserForm.get('Department')?.errors?.['required']">Department is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="PhoneNumber">Phone Number:</label>
+      <input id="PhoneNumber" formControlName="PhoneNumber" type="text" required>
+      <div *ngIf="addUserForm.get('PhoneNumber')?.invalid && addUserForm.get('PhoneNumber')?.touched">
+        <small *ngIf="addUserForm.get('PhoneNumber')?.errors?.['required']">Phone Number is required.</small>
+        <small *ngIf="addUserForm.get('PhoneNumber')?.errors?.['pattern']">Enter a valid 10-digit phone number.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="Password">Password:</label>
+      <input id="Password" formControlName="Password" type="password" required>
+      <div *ngIf="addUserForm.get('Password')?.invalid && addUserForm.get('Password')?.touched">
+        <small *ngIf="addUserForm.get('Password')?.errors?.['required']">Password is required.</small>
+        <small *ngIf="addUserForm.get('Password')?.errors?.['pattern']">
+          Password must contain at least one number, one uppercase letter, one lowercase letter, one special character, and be at least 8 characters long.
+        </small>
+      </div>
+    </div>
+
+    <div>
+      <label for="DOB">Date of Birth:</label>
+      <input id="DOB" formControlName="DOB" type="date" required>
+      <div *ngIf="addUserForm.get('DOB')?.invalid && addUserForm.get('DOB')?.touched">
+        <small *ngIf="addUserForm.get('DOB')?.errors?.['required']">Date of Birth is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="Salary">Salary:</label>
+      <input id="Salary" formControlName="Salary" type="number" required>
+    </div>
+
+    <div>
+      <label for="DOJ">Date of Joining:</label>
+      <input id="DOJ" formControlName="DOJ" type="date" required>
+      <div *ngIf="addUserForm.get('DOJ')?.invalid && addUserForm.get('DOJ')?.touched">
+        <small *ngIf="addUserForm.get('DOJ')?.errors?.['required']">Date of Joining is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="Address">Address:</label>
+      <textarea id="Address" formControlName="Address" required></textarea>
+    </div>
+
+    <button type="submit">Add User</button>
+  </form>
+</div>

@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+ /* @import '~@angular/material/prebuilt-themes/azure-blue.css'; */
+/* General container styling */
+
+.canvas {
+  flex-grow: 1;
+  border: 2px dashed #007bff;
+  padding: 20px;
+  min-height: 600px;
+  background-color: #fff;
+  overflow: auto;
+  outline: none;
+  font-family: Arial, sans-serif;
+}
+
+.canvas-element {
+  border: 1px solid #007bff;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  background-color: #f7f9fc;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.canvas-element.selected {
+  border: 2px solid #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form elements styling */
+input,
+textarea,
+select,
+table {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+textarea {
+  height: 80px;
+}
+
+select {
+  padding: 8px;
+}
+
+/* Table styling */
+table {
+  background-color: #f7f9fc;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+table input {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+table th {
+  background-color: #e7f3ff;
+}
+
+table td {
+  background-color: #fff;
+}
+
+table th:hover,
+table td:hover {
+  background-color: #f1f1f1;
+}
+
+/* Dropdown options remove icon */
+select option i {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #ff0000;
+}
+
+select option i:hover {
+  color: #cc0000;
+}
+
+/* General canvas dynamic element styling */
+.canvas-dynamic-element {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #f7f9fc;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.canvas-dynamic-element:focus,
+.canvas-dynamic-element:hover {
+  border-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+
+
+

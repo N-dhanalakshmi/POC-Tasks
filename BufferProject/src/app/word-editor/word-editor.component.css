@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+.toolbar {
+  margin-right: 20px;
+  width: 200px;
+}
+
+.toolbar-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e7f3ff;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.toolbar-item:hover {
+  background-color: #d0e7ff;
+}
+
+.canvas {
+  border: 2px dashed #007bff;
+  padding: 20px;
+  min-height: 600px;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  overflow: auto;
+  outline: none;
+  font-family: Arial, sans-serif;
+}
+
+.canvas-element {
+  border: 1px solid #007bff;
+  margin: 5px;
+  padding: 5px;
+  background-color: #f7f9fc;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.remove-button {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+}

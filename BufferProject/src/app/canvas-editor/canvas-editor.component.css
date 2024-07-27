@@ -1,0 +1,7 @@
+.list {
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+  background-color: rgb(241, 236, 236);
+  cursor: grab;
+}

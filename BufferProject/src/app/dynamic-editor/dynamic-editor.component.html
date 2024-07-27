@@ -1,0 +1,34 @@
+<div>
+  <span style="display:flex ;margin-left: 80%;">
+   <button id="save" (click)="saveTemplate()" >Save</button>
+   <button id="preview" (click)="showPreview()" >Preview</button>
+   <button id="cancel" (click)="cancelEditing()">Close</button>
+  </span></div>
+<div class="container">
+  <div class="toolbar">
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'textbox')">
+      <span><i class="fas fa-font"></i><br> Textbox</span>
+    </div>
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'textarea')">
+      <span><i class="fas fa-align-left"></i><br>Textarea</span>
+    </div>
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'dropdown')">
+      <span><i class="fa-solid fa-list"></i><br>Dropdown</span>
+    </div>
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'datepicker')">
+      <span><i class="fa-solid fa-calendar-days"></i><br>Datepicker</span>
+    </div>
+    <div class="toolbar-item" draggable="true" (dragstart)="onDragStart($event, 'table')">
+      <span><i class="fa-solid fa-table"></i><br>Table</span>
+    </div>
+  </div>
+  <div class="canvas-container">
+    <div #canvas id="canvas" class="canvas" contenteditable="true" (dragover)="onDragOver($event)" (drop)="onDrop($event)">
+      Hi Dhana !
+      <div *ngFor="let component of canvasElements">
+      <ng-container *ngComponentOutlet="component" ></ng-container>
+    </div>
+    </div>
+  </div>
+</div>
+

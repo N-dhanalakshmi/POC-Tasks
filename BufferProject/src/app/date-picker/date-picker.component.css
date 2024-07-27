@@ -1,0 +1,20 @@
+.datepicker-container {
+  position: relative;
+  width: 25%; /* Full width of the parent container */
+  display: inline-block;
+}
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: calc(50% - 12px); /* Position at the top right corner of the input box */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Adjust size as needed */
+  padding: 0;
+}
+
+.close-btn i {
+  color: blue; /* Adjust color as needed */
+  font-size: 20px; /* Adjust size as needed */
+}
