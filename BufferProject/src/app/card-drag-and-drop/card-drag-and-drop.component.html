@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="contents" (dragover)="onDragOver($event)" (drop)="onDrop($event)" >
+    <div class="cards" *ngFor="let user of cardUsers;let i = index">
+      <p-card draggable="true" (dragstart)="onDragStart($event, user.id)">
+        <!-- By using user interface with optional color property -->
+        <!-- <b [ngStyle]="{'background-color': user.color}"> {{user.name.charAt(0)}} </b> -->
+        <!-- By using color object having id and respective color -->
+        <!-- <b [ngStyle]="{'background-color': getColor(user.id)}"> {{user.name.charAt(0)}} </b> -->
+        <!-- By using Map with id and color -->
+        <b [ngStyle]="{'background-color': colorMap.get(user.id)} || '#FFFFFF'"> {{user.name.charAt(0)}} </b>
+        <p>
+          {{user.name}}
+        </p>
+      </p-card>
+    </div>
+  </div>
+  <div class="droppedContents" (dragover)="onDragOver($event)" (drop)="onDrop($event)" >
+    <div class="cards" *ngFor="let user of droppedUsers">
+      <p-card draggable="true" (dragstart)="onDragStart($event, user.id)">
+        <!-- <b [ngStyle]="{'background-color': user.color}"> {{user.name.charAt(0)}} </b> -->
+        <!-- <b [ngStyle]="{'background-color': getColor(user.id)}"> {{user.name.charAt(0)}} </b> -->
+        <b [ngStyle]="{'background-color': colorMap.get(user.id) || '#FFFFFF'}"> {{user.name.charAt(0)}} </b>
+        <p>
+          {{user.name}}
+        </p>
+      </p-card>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,4 @@
+import { CardDragAndDropComponent } from './card-drag-and-drop/card-drag-and-drop.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -43,7 +44,8 @@ import { PreviewLibraryComponent } from 'preview-tool/src/lib/preview-tool/previ
     TableComponent,
     DynamicEditorComponent,
     TemplatesComponent,
-    PreviewLibraryComponent
+    PreviewLibraryComponent,
+    CardDragAndDropComponent
   ],
   imports: [
     BrowserModule,
