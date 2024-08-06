@@ -1,4 +1,5 @@
 using ExcelActions.Repositories;
+using ExcelActions.ScheduledService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExcelActions.Controllers;
@@ -8,9 +9,11 @@ namespace ExcelActions.Controllers;
 public class ActionsController : ControllerBase
 {
 
+    private readonly CancellationTokenService cancellationTokenService;
     private readonly ExcelRepository repository;
-    public ActionsController(ExcelRepository repository)
+    public ActionsController(ExcelRepository repository,CancellationTokenService cancellationTokenService)
     {
+        this.cancellationTokenService = cancellationTokenService ?? throw new ArgumentNullException(nameof(cancellationTokenService));
         this.repository = repository;
     }
 
@@ -60,5 +63,22 @@ public class ActionsController : ControllerBase
         await repository.ImportEmployeesForUpdate(file);
         return Ok("Employee Details imported to Database");
     }
+
+    [HttpPost]
+    [Route("CancelToken")]
+
+    public async Task<IActionResult> CancelToken(){
+        cancellationTokenService.Cancel();
+        return Ok();
+    }
+
+    [HttpPost]
+    [Route("ResetToken")]
+
+    public async Task<IActionResult> ResetToken(){
+        cancellationTokenService.Reset();
+        return Ok();
+    }
+
 
 }

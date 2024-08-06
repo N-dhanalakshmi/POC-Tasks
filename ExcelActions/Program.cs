@@ -1,5 +1,6 @@
 using ExcelActions.Models;
 using ExcelActions.Repositories;
+using ExcelActions.ScheduledService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<EmployeesDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<ExcelRepository>();
+builder.Services.AddSingleton<CancellationTokenService>();
+builder.Services.AddHostedService<ScheduledService>();
 
 var app = builder.Build();
 
@@ -28,6 +31,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+// Initialize the scheduler
+// JobManager.Initialize(new JobRegistry());
 
 app.MapControllers();
 

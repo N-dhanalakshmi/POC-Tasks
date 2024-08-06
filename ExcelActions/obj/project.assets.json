@@ -46,6 +46,19 @@
           }
         }
       },
+      "FluentScheduler/5.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/FluentScheduler.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentScheduler.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FluentValidation/11.5.1": {
         "type": "package",
         "compile": {
@@ -1802,6 +1815,22 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "FluentScheduler/5.5.1": {
+      "sha512": "OwehD7vZ1CFAboLPrfBTibz/FeKg8DK1h242u0Y050dbfcOlb+d4S/iGBNt/yHaHIhCsmPiQqQjG13e441xWLA==",
+      "type": "package",
+      "path": "fluentscheduler/5.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentscheduler.5.5.1.nupkg.sha512",
+        "fluentscheduler.nuspec",
+        "lib/netstandard2.0/FluentScheduler.dll",
+        "lib/netstandard2.0/FluentScheduler.xml",
+        "lib/netstandard2.1/FluentScheduler.dll",
+        "lib/netstandard2.1/FluentScheduler.xml",
+        "logo-200x200.png"
       ]
     },
     "FluentValidation/11.5.1": {
@@ -4984,6 +5013,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "FluentScheduler >= 5.5.1",
       "FluentValidation.AspNetCore >= 11.3.0",
       "GemBox.Spreadsheet >= 39.3.30.1106",
       "Microsoft.EntityFrameworkCore >= 8.0.7",
@@ -5001,11 +5031,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dhana.neelakandan\\ACE11609\\ExcelActions\\ExcelActions.csproj",
+      "projectUniqueName": "C:\\Users\\dhana.neelakandan\\ACE11609\\POCs\\ExcelActions\\ExcelActions.csproj",
       "projectName": "ExcelActions",
-      "projectPath": "C:\\Users\\dhana.neelakandan\\ACE11609\\ExcelActions\\ExcelActions.csproj",
+      "projectPath": "C:\\Users\\dhana.neelakandan\\ACE11609\\POCs\\ExcelActions\\ExcelActions.csproj",
       "packagesPath": "C:\\Users\\dhana.neelakandan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dhana.neelakandan\\ACE11609\\ExcelActions\\obj\\",
+      "outputPath": "C:\\Users\\dhana.neelakandan\\ACE11609\\POCs\\ExcelActions\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dhana.neelakandan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5032,6 +5062,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "FluentScheduler": {
+            "target": "Package",
+            "version": "[5.5.1, )"
+          },
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[11.3.0, )"
